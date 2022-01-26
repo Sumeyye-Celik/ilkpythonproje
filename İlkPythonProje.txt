@@ -1,0 +1,27 @@
+"""
+Bir listeyi düzleştiren (flatten) fonksiyon yazın. 
+Elemanları birden çok katmanlı listelerden ([[3],2] gibi) oluşabileceği gibi,
+non-scalar verilerden de oluşabilir.
+"""
+
+l=[[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+new_l=[]
+def flatten(liste):
+        for e in liste:
+            new_l.append(e)
+flatten(l)
+print(new_l)
+
+
+"""
+Verilen listenin içindeki elemanları tersine döndüren bir fonksiyon yazın. 
+Eğer listenin içindeki elemanlar da liste içeriyorsa onların elemanlarını da tersine döndürün.
+"""
+
+l=[[1, 2], [3, 4], [5, 6, 7]]
+new_l=[]
+def tersle(x):
+    for i in sorted(l,reverse=True):
+        new_l.append(sorted(i, reverse=True))
+tersle(l)
+print(new_l)
